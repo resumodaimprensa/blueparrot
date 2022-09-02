@@ -12,21 +12,22 @@
   <body>
 
     <section class="section-form">
-      <div class="img">
+      <div >
         <img
+        class="img-parrot"
           src="bluparrot.jpeg"
           alt="Blue Parrot"
         />
       </div>
       <div class="form">
-        <ul>
-          <li>
-            <p>Link&colon;</p>
-            <input type="url" placeholder="Cole aqui seu link" />
+        <ul class="form-list">
+          <li class="list-item">
+            <p class="title">Link&colon;</p>
+            <input class="input" type="url" placeholder="Cole aqui seu link" />
             <button>Encurtar</button>
           </li>
-          <li>
-            <p>Classificação&colon;</p>
+          <li class="list-item">
+            <p class="title">Classificação&colon;</p>
             <fieldset>
               <div class="radio-options">
                 <div class="color color-red"></div>
@@ -44,7 +45,7 @@
                 <p>Positiva</p>
               </div>             
           </li>
-          <li>
+          <li class="list-item">
             <p>Veículo&colon;</p>
             <select name="veiculo" id="veiculo-dropdown">
               <option class="v-dropdown" value="0">Selecionar</option>
@@ -54,17 +55,20 @@
               <option class="c-dropdown" value="0">Selecionar</option>
             </select>
           </li>
-          <li>
-            <p>Link Curto&colon;</p>
-            <input type="url">
+          <li class="list-item">
+            <p class="title">Link Curto&colon;</p>
+            <input class="input" type="url">
           </li>
-          <li>
-            <p>Tags&colon;</p>
-            <input type="text">
+          <li class="list-item">
+            <p class="title">Tags&colon;</p>
+            <input class="input" type="text">
           </li>
         </ul>
       </div>
-      <div class="box-txt"></div>
+      <div class="box-txt">
+        <div class="result"></div>
+        <button>Copiar</button>
+      </div>
     </section>
 
     
