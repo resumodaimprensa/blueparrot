@@ -87,8 +87,24 @@ fieldset {
   border-radius: 3px;
 }
 
+select {
+  padding-right: 4rem;
+}
+
 .btn-copiar {
   padding: 1rem 2rem;
   background-color: #3f4d8c;
   margin-top: 2rem;
+}
+
+.title-link-curto {
+  min-width: 9rem;
+}
+
+.input-link-curto {
+  padding-right: 15.5rem;
+}
+
+.input-tag {
+  padding-right: 20.6rem;
 }
