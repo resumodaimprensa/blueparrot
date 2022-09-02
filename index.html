@@ -10,6 +10,64 @@
     <title>Blue Parrot</title>
   </head>
   <body>
+
+    <section class="section-form">
+      <div class="img">
+        <img
+          src="bluparrot.jpeg"
+          alt="Blue Parrot"
+        />
+      </div>
+      <div class="form">
+        <ul>
+          <li>
+            <p>Link&colon;</p>
+            <input type="url" placeholder="Cole aqui seu link" />
+            <button>Encurtar</button>
+          </li>
+          <li>
+            <p>Classificação&colon;</p>
+            <fieldset>
+              <div class="radio-options">
+                <div class="color color-red"></div>
+                <input type="radio" id="option" name="option" />
+                <p>Negativa</p>
+              </div>
+              <div class="radio-options">
+                <div class="color color-yellow"></div>
+                <input type="radio" id="option" name="option" checked />
+                <p>Neutra</p>
+              </div>
+              <div class="radio-options">
+                <div class="color color-green"></div>
+                <input type="radio" id="option" name="option" />
+                <p>Positiva</p>
+              </div>             
+          </li>
+          <li>
+            <p>Veículo&colon;</p>
+            <select name="veiculo" id="veiculo-dropdown">
+              <option class="v-dropdown" value="0">Selecionar</option>
+            </select>
+            <p>Categoria&colon;</p>
+            <select name="categoria" id="categoria-dropdown">
+              <option class="c-dropdown" value="0">Selecionar</option>
+            </select>
+          </li>
+          <li>
+            <p>Link Curto&colon;</p>
+            <input type="url">
+          </li>
+          <li>
+            <p>Tags&colon;</p>
+            <input type="text">
+          </li>
+        </ul>
+      </div>
+      <div class="box-txt"></div>
+    </section>
+
+    
     <script src="script.js"></script>
   </body>
 </html>
