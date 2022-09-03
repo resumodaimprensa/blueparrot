@@ -45,7 +45,7 @@ veiculos.addEventListener('change', e => {
   let select = e.currentTarget;
   let selectedValue = select.value;
   let selectedOption = select.options[selectedValue];
-  veiculoContainer.textContent = selectedOption.textContent;
+  veiculoContainer.textContent = selectedOption.textContent + ' -';
 });
 categoria.addEventListener('change', e => {
   let select = e.currentTarget;

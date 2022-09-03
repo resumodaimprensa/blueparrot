@@ -163,8 +163,14 @@ select {
   gap: 1rem;
 }
 
-#p-veiculo {
+#containerCor {
+  transform: translate(6px, -2px);
+}
+
+#p-veiculo,
+#p-categoria {
   font-weight: bold;
+  padding: 0;
 }
 
 #tags {
