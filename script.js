@@ -55,21 +55,6 @@ categoria.addEventListener('change', e => {
 });
 
 tagInput.addEventListener('keyup', e => {
-  tagContainer.innerHTML = '';
-  let tagString = '';
-  tagString = e.currentTarget.value;
-  let tags = tagString.split('/');
-  // tagContainer.textContent =
-  console.log(tags, tagContainer);
-
-  tags.forEach(tag => {
-    tag = tag.trim();
-    if (tag.length > 0) {
-      let element = document.createElement('p');
-      element.classList.add('created-tag');
-      element.textContent = tag + '/';
-      tagContainer.appendChild(element);
-    }
-  });
+  tagContainer.textContent = e.currentTarget.value;
 });
 //teste.addEventListener('keydown')
