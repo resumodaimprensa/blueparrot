@@ -10,71 +10,114 @@
     <title>Blue Parrot</title>
   </head>
   <body>
-
     <section class="section-form">
-      <div >
-        <img
-        class="img-parrot"
-          src="bluparrot.jpeg"
-          alt="Blue Parrot"
-        />
+      <div>
+        <img class="img-parrot" src="bluparrot.jpeg" alt="Blue Parrot" />
       </div>
       <div class="form">
         <ul class="form-list">
           <li class="list-item">
             <p class="title">Link&colon;</p>
-            <input class="input input-link" type="url" placeholder="Cole aqui seu link" />
+            <input
+              id="input-link"
+              class="input"
+              type="url"
+              placeholder="Cole aqui seu link"
+            />
             <button class="btn btn-encurtar">Encurtar</button>
           </li>
           <li class="list-item">
             <p class="title">Classificação&colon;</p>
-            <fieldset>
+            <fieldset id="classificacao">
               <div class="radio-options">
                 <div class="color color-red"></div>
-                <input type="radio" id="option" name="option" />
+                <input
+                  type="radio"
+                  name="classificacao"
+                  id="option"
+                  value="#d90300"
+                />
                 <p>Negativa</p>
               </div>
               <div class="radio-options">
                 <div class="color color-yellow"></div>
-                <input type="radio" id="option" name="option" checked />
+                <input
+                  type="radio"
+                  name="classificacao"
+                  id="option"
+                  value="#fbed34"
+                />
                 <p>Neutra</p>
               </div>
               <div class="radio-options">
                 <div class="color color-green"></div>
-                <input type="radio" id="option" name="option" />
+                <input
+                  type="radio"
+                  name="classificacao"
+                  id="option"
+                  value="#62a732"
+                />
                 <p>Positiva</p>
-              </div>             
+              </div>
+            </fieldset>
           </li>
           <li class="list-item">
             <p>Veículo&colon;</p>
             <select name="veiculo" id="veiculo-dropdown">
               <option class="v-dropdown" value="0">Selecionar</option>
+              <option class="v-dropdown" value="1">
+                &ast;Agência Brasil&ast;
+              </option>
+              <option class="v-dropdown" value="2">&ast;G1&ast;</option>
+              <option class="v-dropdown" value="3">&ast;Metrópolis&ast;</option>
+              <option class="v-dropdown" value="4">&ast;O Globo&ast;</option>
+              <option class="v-dropdown" value="5">&ast;Uol&ast;</option>
+              <option class="v-dropdown" value="6">
+                &ast;Valor Econômico&ast;
+              </option>
+              <option class="v-dropdown" value="7">&ast;Veja&ast;</option>
+              <option class="v-dropdown" value="8">&ast;Terra&ast;</option>
             </select>
             <p>Categoria&colon;</p>
             <select name="categoria" id="categoria-dropdown">
               <option class="c-dropdown" value="0">Selecionar</option>
+              <option class="c-dropdown" value="1">&ast;Nacional&ast;</option>
+              <option class="c-dropdown" value="2">
+                &ast;Internacional&ast;
+              </option>
+              <option class="c-dropdown" value="3">&ast;Coluna&ast;</option>
+              <option class="c-dropdown" value="4">&ast;Blog&ast;</option>
             </select>
           </li>
-          <li class="list-item">
-            <div class="title-link-curto"><p class="title">Link Curto&colon;</p></div>
-            <input class="input input-link-curto" type="url">
-          </li>
+
           <li class="list-item">
             <p class="title">Tags&colon;</p>
-            <input class="input input-tag" type="text">
+            <input
+              id="tag-input"
+              class="input input-tag"
+              type="text"
+              placeholder="Cultura; Lazer; Política;"
+            />
           </li>
         </ul>
       </div>
-      <div>
-        <button class="btn btn-enviar"></button>
-      </div>
+
       <div class="box-txt">
-        <div class="result"></div>
-        <button class="btn btn-copiar">Copiar</button>
+        <div class="btn-center">
+          <button class="btn btn-copiar">Copiar</button>
+        </div>
+        <resultado class="result">
+          <p id="p-link"></p>
+          <div class="color-selects">
+            <div id="containerCor" class="color"></div>
+            <p id="p-veiculo"></p>
+            <p id="p-categoria"></p>
+          </div>
+          <div id="tags"></div>
+        </resultado>
       </div>
     </section>
 
-    
     <script src="script.js"></script>
   </body>
 </html>
