@@ -41,7 +41,7 @@ linkInput.addEventListener('keyup', e => {
 
 radioButtons.forEach(radioBtn => {
   radioBtn.addEventListener('change', e => {
-    corContainer.textContent = e.currentTarget.value;
+    corContainer.textContent = e.currentTarget.value + ' ';
     blueParrot.classificação = corContainer.textContent;
    
   });
