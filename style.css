@@ -135,12 +135,12 @@ select {
   width: 100%;
 }
 
-.created-tag {
+/* .created-tag {
   color: #495057;
   border-radius: 10px;
   padding: 3px 6px;
   background-color: #ced4da;
-}
+} */
 
 .box-txt {
   display: flex;
@@ -162,6 +162,6 @@ select {
   gap: 0.5rem;
 }
 
-#tags p {
+/* #tags p {
   padding: 0 1rem;
-}
+} */

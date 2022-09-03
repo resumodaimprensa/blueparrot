@@ -37,7 +37,7 @@ linkInput.addEventListener('keyup', e => {
 
 radioButtons.forEach(radioBtn => {
   radioBtn.addEventListener('change', e => {
-    corContainer.style.backgroundColor = e.currentTarget.value;
+    corContainer.textContent = e.currentTarget.value;
   });
 });
 
@@ -58,7 +58,7 @@ tagInput.addEventListener('keyup', e => {
   tagContainer.innerHTML = '';
   let tagString = '';
   tagString = e.currentTarget.value;
-  let tags = tagString.split(';');
+  let tags = tagString.split('/');
   // tagContainer.textContent =
   console.log(tags, tagContainer);
 
@@ -67,7 +67,7 @@ tagInput.addEventListener('keyup', e => {
     if (tag.length > 0) {
       let element = document.createElement('p');
       element.classList.add('created-tag');
-      element.textContent = tag;
+      element.textContent = tag + '/';
       tagContainer.appendChild(element);
     }
   });
