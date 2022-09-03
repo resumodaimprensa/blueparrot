@@ -64,6 +64,12 @@ select {
   background-color: #63b5c3;
 }
 
+.carregando{
+  width: 21px;
+  height: 21px;
+  display: none;
+}
+
 .btn-encurtar:hover {
   cursor: pointer;
   background-color: #6fc8d7;
@@ -129,10 +135,14 @@ select {
 .result {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  /* gap: 1rem; */
   border: 2px solid #ccc;
   padding: 1rem;
   width: 39rem;
+}
+
+#p-link{
+  word-break: break-all;
 }
 
 .input-link-curto {
