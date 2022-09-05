@@ -25,7 +25,11 @@
               placeholder="Cole aqui seu link"
             />
             <button class="btn btn-encurtar">Encurtar</button>
-            <img class="carregando" src="activity_indicator.gif" alt="carregando">
+            <img
+              class="carregando"
+              src="activity_indicator.gif"
+              alt="carregando"
+            />
           </li>
           <li class="list-item">
             <p class="title">Classificação&colon;</p>
@@ -64,31 +68,25 @@
           </li>
           <li class="list-item">
             <p>Veículo&colon;</p>
-            <select name="veiculo" id="veiculo-dropdown">
-              <option class="v-dropdown" value="0">Selecionar</option>
-              <option class="v-dropdown" value="1">
-                &ast;Agência Brasil&ast;
-              </option>
-              <option class="v-dropdown" value="2">&ast;G1&ast;</option>
-              <option class="v-dropdown" value="3">&ast;Metrópolis&ast;</option>
-              <option class="v-dropdown" value="4">&ast;O Globo&ast;</option>
-              <option class="v-dropdown" value="5">&ast;Uol&ast;</option>
-              <option class="v-dropdown" value="6">
-                &ast;Valor Econômico&ast;
-              </option>
-              <option class="v-dropdown" value="7">&ast;Veja&ast;</option>
-              <option class="v-dropdown" value="8">&ast;Terra&ast;</option>
-            </select>
+            <input class="veiculos" type="text" list="veiculo-dropdown" />
+            <datalist name="veiculo" id="veiculo-dropdown">
+              <option class="v-dropdown">&ast;Agência Brasil&ast;</option>
+              <option class="v-dropdown">&ast;G1&ast;</option>
+              <option class="v-dropdown">&ast;Metrópolis&ast;</option>
+              <option class="v-dropdown">&ast;O Globo&ast;</option>
+              <option class="v-dropdown">&ast;Uol&ast;</option>
+              <option class="v-dropdown">&ast;Valor Econômico&ast;</option>
+              <option class="v-dropdown">&ast;Veja&ast;</option>
+              <option class="v-dropdown">&ast;Terra&ast;</option>
+            </datalist>
             <p>Categoria&colon;</p>
-            <select name="categoria" id="categoria-dropdown">
-              <option class="c-dropdown" value="0">Selecionar</option>
-              <option class="c-dropdown" value="1">&ast;Nacional&ast;</option>
-              <option class="c-dropdown" value="2">
-                &ast;Internacional&ast;
-              </option>
-              <option class="c-dropdown" value="3">&ast;Coluna&ast;</option>
-              <option class="c-dropdown" value="4">&ast;Blog&ast;</option>
-            </select>
+            <input class="categorias" type="text" list="categoria-dropdown" />
+            <datalist name="categoria" id="categoria-dropdown">
+              <option class="c-dropdown">&ast;Nacional&ast;</option>
+              <option class="c-dropdown">&ast;Internacional&ast;</option>
+              <option class="c-dropdown">&ast;Coluna&ast;</option>
+              <option class="c-dropdown">&ast;Blog&ast;</option>
+            </datalist>
           </li>
 
           <li class="list-item">
@@ -123,9 +121,7 @@
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-    <script>
-      
-    </script>
+    <script></script>
     <script src="script.js"></script>
   </body>
 </html>
