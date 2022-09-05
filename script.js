@@ -4,6 +4,7 @@ let blueParrot = {
   link: '',
   classificação: '',
   veiculo: '',
+  coluna: '',
   linkCurto: '',
   tags: '',
 };
@@ -15,6 +16,7 @@ const divForm = document.querySelector('div.form');
 const linkInput = divForm.querySelector('input#input-link');
 const radioButtons = divForm.querySelectorAll('fieldset#classificacao input');
 const veiculos = divForm.querySelector('.veiculos');
+const blogColuna = divForm.querySelector('.blog-coluna');
 const categoria = divForm.querySelector('.categorias');
 const tagInput = divForm.querySelector('#tag-input');
 const teste = document.createElement('input');
@@ -26,6 +28,7 @@ const resultadoTag = document.querySelector('resultado');
 const linkContainer = resultadoTag.querySelector('#p-link');
 const corContainer = resultadoTag.querySelector('#containerCor');
 const veiculoContainer = resultadoTag.querySelector('#p-veiculo');
+const blogColunaContainer = resultadoTag.querySelector('#p-coluna');
 const categoriaContainer = resultadoTag.querySelector('#p-categoria');
 const linkCurto = resultadoTag.querySelector('#link-curto');
 const tagContainer = resultadoTag.querySelector('#tags');
@@ -45,11 +48,15 @@ radioButtons.forEach(radioBtn => {
 });
 
 veiculos.addEventListener('change', e => {
-  veiculoContainer.textContent = e.currentTarget.value;
+  veiculoContainer.textContent = '*' + e.currentTarget.value + '* - ';
   blueParrot.veiculo = veiculoContainer.textContent;
 });
+blogColuna.addEventListener('change', e => {
+  blogColunaContainer.textContent = '_' + e.currentTarget.value + '_ - ';
+  blueParrot.coluna = blogColunaContainer.textContent;
+});
 categoria.addEventListener('change', e => {
-  categoriaContainer.textContent = e.currentTarget.value;
+  categoriaContainer.textContent = '*' + e.currentTarget.value + '*';
   blueParrot.categoria = categoriaContainer.textContent;
 });
 
@@ -96,7 +103,7 @@ const btnCopiar = document.querySelector('.btn-copiar');
 btnCopiar.addEventListener('click', e => {
   navigator.clipboard
     .writeText(
-      `${blueParrot.link}\n${blueParrot.classificação}${blueParrot.veiculo}${blueParrot.categoria}\n${blueParrot.linkCurto}\n${blueParrot.tags}`
+      `${blueParrot.link}\n${blueParrot.classificação}${blueParrot.veiculo}${blueParrot.coluna}${blueParrot.categoria}\n${blueParrot.linkCurto}\n${blueParrot.tags}`
     )
     .then(() => {
       alert('Copiado');
