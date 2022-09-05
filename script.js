@@ -52,8 +52,15 @@ veiculos.addEventListener('change', e => {
   blueParrot.veiculo = veiculoContainer.textContent;
 });
 blogColuna.addEventListener('change', e => {
-  blogColunaContainer.textContent = '_' + e.currentTarget.value + '_ - ';
-  blueParrot.coluna = blogColunaContainer.textContent;
+  let blogselected = blogColuna.value;
+  console.log(blogselected);
+  if (blogselected.length > 0) {
+    blogColunaContainer.textContent = '_' + e.currentTarget.value + '_ - ';
+    blueParrot.coluna = blogColunaContainer.textContent;
+  } else {
+    blogColunaContainer.textContent = '';
+    blueParrot.coluna = '';
+  }
 });
 categoria.addEventListener('change', e => {
   categoriaContainer.textContent = '*' + e.currentTarget.value + '*';
