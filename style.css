@@ -48,6 +48,10 @@ select {
   gap: 1rem;
 }
 
+.itens-second{
+  display: flex;
+}
+
 #input-link {
   width: 100%;
 }
@@ -138,7 +142,7 @@ select {
   /* gap: 1rem; */
   border: 2px solid #ccc;
   padding: 1rem;
-  width: 39rem;
+  width: 55rem;
 }
 
 #p-link{

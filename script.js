@@ -48,22 +48,22 @@ radioButtons.forEach(radioBtn => {
 });
 
 veiculos.addEventListener('change', e => {
-  veiculoContainer.textContent = '*' + e.currentTarget.value + '* - ';
-  blueParrot.veiculo = veiculoContainer.textContent;
+  veiculoContainer.textContent = e.currentTarget.value  + ' - ';
+  blueParrot.veiculo = e.currentTarget.value;
 });
 blogColuna.addEventListener('change', e => {
   let blogselected = blogColuna.value;
   console.log(blogselected);
   if (blogselected.length > 0) {
-    blogColunaContainer.textContent = '_' + e.currentTarget.value + '_ - ';
-    blueParrot.coluna = blogColunaContainer.textContent;
+    blogColunaContainer.textContent = e.currentTarget.value + ' - ';
+    blueParrot.coluna = e.currentTarget.value;
   } else {
     blogColunaContainer.textContent = '';
     blueParrot.coluna = '';
   }
 });
 categoria.addEventListener('change', e => {
-  categoriaContainer.textContent = '*' + e.currentTarget.value + '*';
+  categoriaContainer.textContent = e.currentTarget.value;
   blueParrot.categoria = categoriaContainer.textContent;
 });
 
@@ -110,7 +110,7 @@ const btnCopiar = document.querySelector('.btn-copiar');
 btnCopiar.addEventListener('click', e => {
   navigator.clipboard
     .writeText(
-      `${blueParrot.link}\n${blueParrot.classificação}${blueParrot.veiculo}${blueParrot.coluna}${blueParrot.categoria}\n${blueParrot.linkCurto}\n${blueParrot.tags}`
+      `${blueParrot.link}\n${blueParrot.classificação}*${blueParrot.veiculo}* - _${blueParrot.coluna}_ - *${blueParrot.categoria}*\n${blueParrot.linkCurto}\n${blueParrot.tags}`
     )
     .then(() => {
       alert('Copiado');
