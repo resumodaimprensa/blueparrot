@@ -48,14 +48,20 @@ radioButtons.forEach(radioBtn => {
 });
 
 veiculos.addEventListener('change', e => {
-  veiculoContainer.textContent = e.currentTarget.value  + ' - ';
+  let veiculoSelected = veiculos.value;
+  if (veiculoSelected.length > 0) {
+  veiculoContainer.textContent = e.currentTarget.value;
   blueParrot.veiculo = e.currentTarget.value;
+} else {
+  veiculoContainer.textContent = '';
+  blueParrot.veiculo = '';
+}
 });
 blogColuna.addEventListener('change', e => {
   let blogselected = blogColuna.value;
   console.log(blogselected);
   if (blogselected.length > 0) {
-    blogColunaContainer.textContent = e.currentTarget.value + ' - ';
+    blogColunaContainer.textContent = ' - ' + e.currentTarget.value ;
     blueParrot.coluna = e.currentTarget.value;
   } else {
     blogColunaContainer.textContent = '';
@@ -63,8 +69,14 @@ blogColuna.addEventListener('change', e => {
   }
 });
 categoria.addEventListener('change', e => {
-  categoriaContainer.textContent = e.currentTarget.value;
+  let categoriaSelected = categoria.value;
+  if (categoriaSelected.length > 0){
+  categoriaContainer.textContent = ' - ' + e.currentTarget.value;
   blueParrot.categoria = categoriaContainer.textContent;
+} else {
+  categoriaContainer.textContent = '';
+  blueParrot.categoria = '';
+}
 });
 
 tagInput.addEventListener('keyup', e => {
