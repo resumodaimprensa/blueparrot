@@ -51,7 +51,7 @@ veiculos.addEventListener('change', e => {
   let veiculoSelected = veiculos.value;
   if (veiculoSelected.length > 0) {
   veiculoContainer.textContent = e.currentTarget.value;
-  blueParrot.veiculo = e.currentTarget.value;
+  blueParrot.veiculo = '*' + e.currentTarget.value + '*';
 } else {
   veiculoContainer.textContent = '';
   blueParrot.veiculo = '';
@@ -61,8 +61,8 @@ blogColuna.addEventListener('change', e => {
   let blogselected = blogColuna.value;
   console.log(blogselected);
   if (blogselected.length > 0) {
-    blogColunaContainer.textContent = ' - ' + e.currentTarget.value ;
-    blueParrot.coluna = e.currentTarget.value;
+    blogColunaContainer.textContent = ' - ' +  e.currentTarget.value ;
+    blueParrot.coluna = ' - _' + e.currentTarget.value + '_';
   } else {
     blogColunaContainer.textContent = '';
     blueParrot.coluna = '';
@@ -72,7 +72,7 @@ categoria.addEventListener('change', e => {
   let categoriaSelected = categoria.value;
   if (categoriaSelected.length > 0){
   categoriaContainer.textContent = ' - ' + e.currentTarget.value;
-  blueParrot.categoria = categoriaContainer.textContent;
+  blueParrot.categoria = ' - *' + e.currentTarget.value + '*';
 } else {
   categoriaContainer.textContent = '';
   blueParrot.categoria = '';
@@ -122,9 +122,31 @@ const btnCopiar = document.querySelector('.btn-copiar');
 btnCopiar.addEventListener('click', e => {
   navigator.clipboard
     .writeText(
-      `${blueParrot.link}\n${blueParrot.classificação}*${blueParrot.veiculo}* - _${blueParrot.coluna}_ - *${blueParrot.categoria}*\n${blueParrot.linkCurto}\n${blueParrot.tags}`
+      `${blueParrot.link}\n${blueParrot.classificação}${blueParrot.veiculo}${blueParrot.coluna}${blueParrot.categoria}\n${blueParrot.linkCurto}\n${blueParrot.tags}`
     )
     .then(() => {
       alert('Copiado');
     });
 });
+
+
+
+// const settings = {
+// 	"async": true,
+// 	"crossDomain": true,
+// 	"url": "https://googleurlshortenerzakutynskyv1.p.rapidapi.com/expandShortUrl",
+// 	"method": "POST",
+// 	"headers": {
+// 		"content-type": "application/x-www-form-urlencoded",
+// 		"X-RapidAPI-Key": "adf6e12601mshb9fd8cb9146925dp1a78bajsn427074c677a2",
+// 		"X-RapidAPI-Host": "GoogleURLShortenerzakutynskyV1.p.rapidapi.com"
+// 	},
+// 	"data": {
+// 		"shortUrl": "<REQUIRED>",
+// 		"apiKey": "<REQUIRED>"
+// 	}
+// };
+
+// $.ajax(settings).done(function (response) {
+// 	console.log(response);
+// });
