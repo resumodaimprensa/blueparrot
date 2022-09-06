@@ -119,6 +119,10 @@ select {
   width: 100%;
 }
 
+.categorias{
+  width: 30%;
+}
+
 .btn-copiar {
   padding: 1rem 2rem;
   background-color: #3f4d8c;
