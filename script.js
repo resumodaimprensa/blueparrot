@@ -14,6 +14,7 @@ let blueParrot = {
  */
 const divForm = document.querySelector('div.form');
 const linkInput = divForm.querySelector('input#input-link');
+const linkCurto = divForm.querySelector('#link-curto')
 const radioButtons = divForm.querySelectorAll('fieldset#classificacao input');
 const veiculos = divForm.querySelector('.veiculos');
 const blogColuna = divForm.querySelector('.blog-coluna');
@@ -30,7 +31,7 @@ const corContainer = resultadoTag.querySelector('#containerCor');
 const veiculoContainer = resultadoTag.querySelector('#p-veiculo');
 const blogColunaContainer = resultadoTag.querySelector('#p-coluna');
 const categoriaContainer = resultadoTag.querySelector('#p-categoria');
-const linkCurto = resultadoTag.querySelector('#link-curto');
+const linkCurtoContainer = resultadoTag.querySelector('#p-curto');
 const tagContainer = resultadoTag.querySelector('#tags');
 
 // console.log(linkInput);
@@ -38,6 +39,11 @@ const tagContainer = resultadoTag.querySelector('#tags');
 linkInput.addEventListener('keyup', e => {
   linkContainer.textContent = e.currentTarget.value;
   blueParrot.link = linkContainer.textContent;
+});
+
+linkCurto.addEventListener('keyup', e => {
+  linkCurtoContainer.textContent = e.currentTarget.value;
+  blueParrot.linkCurto = linkCurtoContainer.textContent;
 });
 
 radioButtons.forEach(radioBtn => {
@@ -84,36 +90,13 @@ tagInput.addEventListener('keyup', e => {
   blueParrot.tags = tagContainer.textContent;
 });
 //teste.addEventListener('keydown')
-
 const encurtar = document.querySelector('.btn-encurtar');
 
 encurtar.addEventListener('click', () => {
-  document.querySelector('.btn-encurtar').style.display = 'none';
-  document.querySelector('.carregando').style.display = 'block';
+  
+  window.open("https://bitly.com/pages/home/v1", "_blank")
+})
 
-  $.ajax({
-    method: 'POST',
-    url: 'https://api.encurtador.dev/encurtamentos',
-    headers: {
-      'content-type': 'application/json',
-    },
-    data: JSON.stringify({ url: linkInput.value }),
-  })
-    .done(response => {
-      document.querySelector('.btn-encurtar').style.display = 'block';
-      document.querySelector('.carregando').style.display = 'none';
-      linkCurto.textContent = response.urlEncurtada;
-
-      blueParrot.linkCurto = linkCurto.textContent;
-
-      // console.log(response.urlEncurtada)
-    })
-    .fail(e => {
-      document.querySelector('.btn-encurtar').style.display = 'block';
-      document.querySelector('.carregando').style.display = 'none';
-      console.log(e);
-    });
-});
 
 console.log(blueParrot);
 
@@ -129,24 +112,3 @@ btnCopiar.addEventListener('click', e => {
     });
 });
 
-
-
-// const settings = {
-// 	"async": true,
-// 	"crossDomain": true,
-// 	"url": "https://googleurlshortenerzakutynskyv1.p.rapidapi.com/expandShortUrl",
-// 	"method": "POST",
-// 	"headers": {
-// 		"content-type": "application/x-www-form-urlencoded",
-// 		"X-RapidAPI-Key": "adf6e12601mshb9fd8cb9146925dp1a78bajsn427074c677a2",
-// 		"X-RapidAPI-Host": "GoogleURLShortenerzakutynskyV1.p.rapidapi.com"
-// 	},
-// 	"data": {
-// 		"shortUrl": "<REQUIRED>",
-// 		"apiKey": "<REQUIRED>"
-// 	}
-// };
-
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });

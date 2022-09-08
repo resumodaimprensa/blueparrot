@@ -67,16 +67,15 @@ select {
   padding: 3px 6px;
   background-color: #63b5c3;
 }
-
-.carregando{
-  width: 21px;
-  height: 21px;
-  display: none;
-}
+  
 
 .btn-encurtar:hover {
   cursor: pointer;
   background-color: #6fc8d7;
+}
+
+.title-link-curto{
+  min-width: 15%;
 }
 
 .color {
